@@ -16,11 +16,22 @@
     margin: 10px 0;
 }
 
-.wrapper h3 {
-    margin-bottom: 10px;
+.titleWrapper {
+    display: flex;
 }
 
-.wrapper button {
+.titleWrapper svg{
+    position: relative;
+    top: 3px;
+    color: red;
+    cursor: pointer;
+}
+
+.title {
+    margin: 0 5px 10px 0;
+}
+
+.button {
     padding: 5px 8px;
     cursor: pointer;
     border-radius: 5px;
@@ -30,6 +41,6 @@
     transition: all 0.4s;
 }
 
-.wrapper button:hover {
+.button:hover {
     background-color: rgb(252, 12, 16);
 }
