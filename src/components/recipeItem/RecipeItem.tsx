@@ -18,7 +18,7 @@ export const RecipeItem: FC<PropsType> = ({recipe}) => {
 
     return (
         <div className={styles.wrapper}>
-            <div className={styles.img}></div>
+            <img src={recipe.img} alt="" className={styles.img}/>
             <div className={styles.titleWrapper}>
                 <h3 className={styles.title}>{recipe.title}</h3>
                 <div>{isFavorite

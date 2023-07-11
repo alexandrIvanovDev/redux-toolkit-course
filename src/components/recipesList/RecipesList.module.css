@@ -1,5 +1,11 @@
-.recipesBlock {
-    margin: 50px;
+.container {
     display: flex;
     justify-content: center;
+}
+
+.recipesBlock {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }

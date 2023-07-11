@@ -1,10 +1,8 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-const initialState: InitialStateType = []
-
 export const favoriteSlice = createSlice({
     name: 'favorite',
-    initialState,
+    initialState: [] as InitialStateType,
     reducers: {
         toggleFavorite: (state, action: PayloadAction<RecipeType>) => {
             const isExist = state.some(item => item.id === action.payload.id)
@@ -18,11 +16,11 @@ export const favoriteSlice = createSlice({
     }
 })
 
-export const {toggleFavorite} = favoriteSlice.actions
 
 type InitialStateType = Array<RecipeType>
 
 export type RecipeType = {
     id: number
     title: string
+    img: string
 }

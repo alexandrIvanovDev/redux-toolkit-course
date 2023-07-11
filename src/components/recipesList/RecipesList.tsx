@@ -1,16 +1,18 @@
 import {RecipeItem} from '../recipeItem/RecipeItem.tsx';
 import {FC} from 'react';
-import {RecipeType} from '../../store/favorite/favorite-slice.ts';
 import styles from './RecipesList.module.css'
+import {useGetRecipesQuery} from '../../store/api/recipesApi.ts';
 
-type PropsType = {
-    recipes: Array<RecipeType>
-}
+export const RecipesList: FC = () => {
 
-export const RecipesList: FC<PropsType> = ({recipes}) => {
+    const {data} = useGetRecipesQuery('')
+
     return (
-        <div className={styles.recipesBlock}>
-            {recipes.map(r => <RecipeItem recipe={r} key={r.id}/>)}
+        <div className={styles.container}>
+            {data &&
+            <div className={styles.recipesBlock}>
+                {data.map(r => <RecipeItem recipe={r} key={r.id}/>)}
+            </div>}
         </div>
     );
 };
