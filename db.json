@@ -1,0 +1,39 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Apple Frangipan Tart",
+      "img": "https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Spaghetti Bolognese",
+      "img": "https://www.themealdb.com/images/media/meals/sutysw1468247559.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Apple & Blackberry Crumble",
+      "img": "https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Apam balik",
+      "img": "https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Ayam Percik",
+      "img": "https://www.themealdb.com/images/media/meals/020z181619788503.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Teriyaki Chicken Casserole",
+      "img": "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Spicy Arrabiata Penne",
+      "img": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg"
+    }
+  ]
+}
