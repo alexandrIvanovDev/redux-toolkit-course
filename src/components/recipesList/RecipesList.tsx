@@ -2,6 +2,7 @@ import {RecipeItem} from '../recipeItem/RecipeItem.tsx';
 import {FC} from 'react';
 import styles from './RecipesList.module.css'
 import {useGetRecipesQuery} from '../../store/api/recipesApi.ts';
+import {AddRecipe} from '../addRecipe/AddRecipe.tsx';
 
 export const RecipesList: FC = () => {
 
@@ -13,6 +14,9 @@ export const RecipesList: FC = () => {
             <div className={styles.recipesBlock}>
                 {data.map(r => <RecipeItem recipe={r} key={r.id}/>)}
             </div>}
+            <div>
+                <AddRecipe/>
+            </div>
         </div>
     );
 };

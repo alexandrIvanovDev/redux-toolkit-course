@@ -14,11 +14,11 @@ export const recipesApi = createApi({
         getRecipeById: builder.query<RecipeType, number>({
             query: (id) => `/recipes/${id}`,
         }),
-        addRecipe: builder.mutation({
-            query: (title) => ({
+        addRecipe: builder.mutation<RecipeType, RecipeType>({
+            query: (recipe) => ({
               url: '/recipes',
               method: 'POST',
-              body: title
+              body: recipe
             }),
             invalidatesTags: ['Recipe']
         }),
