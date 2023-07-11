@@ -9,6 +9,18 @@
     width: 300px;
 }
 
+.deleteWrapper {
+    position: relative;
+}
+
+.delete {
+    position: absolute;
+    top: 0;
+    left: 115px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 .img {
     width: 100px;
     height: 100px;
