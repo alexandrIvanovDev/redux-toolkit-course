@@ -9,6 +9,6 @@ export const getUserById = createAsyncThunk('users/getUserById',
             return await axios.get<UserType>(`https://jsonplaceholder.typicode.com/users/${userId}`)
                 .then(res => res.data)
         } catch (e) {
-            rejectWithValue('')
+            return rejectWithValue('')
         }
     })

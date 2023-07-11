@@ -5,8 +5,7 @@ import {getUserById} from './users-actions.ts';
 export const usersSlice = createSlice({
     name: 'users',
     initialState: {
-        users: [],
-        selectedUser: {} as UserType,
+        user: {} as UserType,
         isLoading: false,
         error: null
     } as InitialStateType,
@@ -17,7 +16,7 @@ export const usersSlice = createSlice({
         })
         builder.addCase(getUserById.fulfilled, (state, action) => {
             state.isLoading = false
-            state.selectedUser = action.payload
+            state.user = action.payload
         })
         builder.addCase(getUserById.rejected, (state, action) => {
             state.isLoading = false
@@ -34,8 +33,7 @@ export type UserType = {
 }
 
 type InitialStateType = {
-    users: Array<UserType>
-    selectedUser: UserType
+    user: UserType
     isLoading: boolean
     error: null | string
 }
