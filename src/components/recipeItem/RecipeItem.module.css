@@ -9,16 +9,28 @@
     width: 300px;
 }
 
+.icon {
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 .deleteWrapper {
     position: relative;
 }
 
 .delete {
-    position: absolute;
     top: 0;
     left: 115px;
-    font-size: 20px;
-    cursor: pointer;
+}
+
+.editWrapper {
+    position: relative;
+}
+
+.edit {
+    top: 0;
+    left: 90px;
 }
 
 .img {
