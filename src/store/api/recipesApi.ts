@@ -1,11 +1,8 @@
-import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 import {RecipeType} from '../favorite/favorite-slice.ts';
+import {api} from './api.ts';
 
 
-export const recipesApi = createApi({
-    reducerPath: 'recipeApi',
-    baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000' }),
-    tagTypes: ['Recipe'],
+export const recipesApi = api.injectEndpoints({
     endpoints: (builder) => ({
         getRecipes: builder.query<Array<RecipeType>, string>({
             query: () => `/recipes`,
@@ -30,7 +27,15 @@ export const recipesApi = createApi({
             }),
             invalidatesTags: ['Recipe']
         }),
+        changeRecipe: builder.mutation<RecipeType, RecipeType>({
+            query: (recipe) => ({
+                url: `/recipes/${recipe.id}`,
+                method: 'PUT',
+                body: recipe
+            }),
+            invalidatesTags: ['Recipe']
+        }),
     }),
 })
 
-export const {useGetRecipesQuery, useGetRecipeByIdQuery, useAddRecipeMutation, useDeleteRecipeMutation} = recipesApi
+export const {useGetRecipesQuery, useGetRecipeByIdQuery, useAddRecipeMutation, useDeleteRecipeMutation, useChangeRecipeMutation} = recipesApi
