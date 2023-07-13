@@ -5,7 +5,7 @@ import {api} from './api.ts';
 export const recipesApi = api.injectEndpoints({
     endpoints: (builder) => ({
         getRecipes: builder.query<Array<RecipeType>, string>({
-            query: () => `/recipes`,
+            query: (term) => `/recipes?q=${term}`,
             providesTags: () => ['Recipe']
         }),
         getRecipeById: builder.query<RecipeType, number>({

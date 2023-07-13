@@ -1,0 +1,27 @@
+.searchBlock {
+    display: flex;
+    margin: 20px 0;
+}
+
+.deleteWrapper {
+    position: relative;
+}
+
+.deleteIcon {
+    position: absolute;
+    font-size: 25px;
+    top: 16px;
+    cursor: pointer;
+    right: 20px;
+}
+
+.search {
+    position: relative;
+}
+
+.searchIcon {
+    position: absolute;
+    font-size: 30px;
+    top: 13px;
+    cursor: pointer;
+}
