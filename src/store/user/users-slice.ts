@@ -18,7 +18,7 @@ export const usersSlice = createSlice({
             state.isLoading = false
             state.user = action.payload
         })
-        builder.addCase(getUserById.rejected, (state, action) => {
+        builder.addCase(getUserById.rejected, (state, action: any) => {
             state.isLoading = false
             state.error = action.payload
         })

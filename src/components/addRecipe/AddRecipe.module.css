@@ -14,3 +14,13 @@
     border-radius: 5px;
     margin: 10px;
 }
+
+.error {
+    border: 2px solid red;
+    outline: none;
+}
+
+.errorMessage {
+    font-weight: bold;
+    color: red;
+}

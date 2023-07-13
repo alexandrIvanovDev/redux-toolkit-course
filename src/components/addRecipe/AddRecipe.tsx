@@ -42,10 +42,10 @@ export const AddRecipe = () => {
                 type="text"
                 value={title}
                 onChange={onTitleInputHandler}
-                className={styles.input}
+                className={error ? `${styles.input} ${styles.error}` : `${styles.input}`}
                 placeholder='Title'
             />
-            {error && <div>{error}</div>}
+            {error && <div className={styles.errorMessage}>{error}</div>}
             <input
                 type="text"
                 value={img}

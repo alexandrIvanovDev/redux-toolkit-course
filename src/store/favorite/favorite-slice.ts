@@ -12,6 +12,10 @@ export const favoriteSlice = createSlice({
             } else {
                 state.push(action.payload)
             }
+        },
+        removeFromFavorite: (state, action: PayloadAction<RecipeType>) => {
+            const index = state.findIndex(f => f.id === action.payload.id)
+            state.splice(index, 1)
         }
     }
 })
